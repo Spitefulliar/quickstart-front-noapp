@@ -1,0 +1,478 @@
+@import 'variables.scss';
+@import './../../../../node_modules/bourbon-neat/app/assets/stylesheets/_neat.scss';
+
+/* ==========================================================================
+   fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: 'robotoblack';
+    src: url($fontspath + '/Roboto/roboto-black.eot');
+    src: url($fontspath + '/Roboto/roboto-black.eot?#iefix') format('embedded-opentype'),
+         url($fontspath + '/Roboto/roboto-black.woff2') format('woff2'),
+         url($fontspath + '/Roboto/roboto-black.woff') format('woff'),
+         url($fontspath + '/Roboto/roboto-black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url($fontspath + '/Roboto/roboto-bold.eot');
+    src: url($fontspath + '/Roboto/roboto-bold.eot?#iefix') format('embedded-opentype'),
+         url($fontspath + '/Roboto/roboto-bold.woff2') format('woff2'),
+         url($fontspath + '/Roboto/roboto-bold.woff') format('woff'),
+         url($fontspath + '/Roboto/roboto-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url($fontspath + '/Roboto/roboto-light.eot');
+    src: url($fontspath + '/Roboto/roboto-light.eot?#iefix') format('embedded-opentype'),
+         url($fontspath + '/Roboto/roboto-light.woff2') format('woff2'),
+         url($fontspath + '/Roboto/roboto-light.woff') format('woff'),
+         url($fontspath + '/Roboto/roboto-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url($fontspath + '/Roboto/roboto-medium.eot');
+    src: url($fontspath + '/Roboto/roboto-medium.eot?#iefix') format('embedded-opentype'),
+         url($fontspath + '/Roboto/roboto-medium.woff2') format('woff2'),
+         url($fontspath + '/Roboto/roboto-medium.woff') format('woff'),
+         url($fontspath + '/Roboto/roboto-medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url($fontspath + '/Roboto/roboto-regular.eot');
+    src: url($fontspath + '/Roboto/roboto-regular.eot?#iefix') format('embedded-opentype'),
+         url($fontspath + '/Roboto/roboto-regular.woff2') format('woff2'),
+         url($fontspath + '/Roboto/roboto-regular.woff') format('woff'),
+         url($fontspath + '/Roboto/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotothin';
+    src: url($fontspath + '/Roboto/roboto-thin.eot');
+    src: url($fontspath + '/Roboto/roboto-thin.eot?#iefix') format('embedded-opentype'),
+         url($fontspath + '/Roboto/roboto-thin.woff2') format('woff2'),
+         url($fontspath + '/Roboto/roboto-thin.woff') format('woff'),
+         url($fontspath + '/Roboto/roboto-thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* eof fonts */
+
+
+/* ==========================================================================
+   mixins
+   ========================================================================== */
+@mixin link-text() {
+  text-decoration: none;
+  color: inherit;
+  &, &:visited, &:focus {
+    color: inherit;
+  }
+}
+@mixin panel() {
+  border-radius: 2px;
+  color: $dark;
+  background-color: $white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+@mixin list-plain() {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+@mixin text-ellipsis() {
+  white-space: nowrap;
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+}
+
+/* eof mixins */
+
+  /* ==========================================================================
+     elements
+     ========================================================================== */
+
+body {
+  background: $white;
+  font-family: $ffreg;
+  font-size: $fstxt;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+
+a {
+  &, &:visited, &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.svg-icon {
+  margin: 0;
+  background-repeat: no-repeat no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  height: 1em;
+  max-width: 1em;
+  line-height: 1em;
+  svg {
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    fill: currentColor;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  display: inline-block;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: $white;
+  }
+}
+
+.social-icon {
+  @extend .svg-icon;
+  @include link-text();
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 12px;
+  color: $white;
+  cursor: pointer;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  -webkit-transition: color 400ms ease;
+     -moz-transition: color 400ms ease;
+      -ms-transition: color 400ms ease;
+       -o-transition: color 400ms ease;
+          transition: color 400ms ease;
+  
+  &_fb:hover {
+    color: #3d5a98;
+  }
+  &_vk:hover {
+    color: #4c75a3;
+  }
+  &_ok:hover {
+    color: #ff9600;
+  }
+  &_tw:hover {
+    color: #2aa9e0;
+  }
+  &_gplus:hover {
+    color: #dc4a38;
+  }
+  &_linkedin:hover {
+    color: #0077b5;
+  }
+}
+
+
+//scrollbar
+.scroller {
+  padding-right: 18px;
+  margin-right: -18px;
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    &__x {
+      width: 100%;
+    }
+  }
+  &__track_v {
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: none;
+    opacity: 1;
+  }
+  &__bar_v {
+    right: -3px;
+    width: 6px;
+    -webkit-border-radius: 0px;
+            border-radius: 0px;
+    background: $white;
+    opacity: 0.4;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-button,
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-corner,
+  &::-webkit-resizer,
+  { /* for Mac OS X support */
+      width: 0;
+      height: 0;
+      display: none;
+  }
+}
+
+/* eof elements */
+
+/* ==========================================================================
+   animations
+   ========================================================================== */
+   
+.animated {
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated-long {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+/* eof animations */
+
+/* ==========================================================================
+   main styles
+   ========================================================================== */
+*:focus, *:active {
+  outline: none;
+}
+
+html {
+  min-height: 100%;
+}
+body {
+  min-height: 100%;
+  height: auto;
+  position: relative;
+  -ms-overflow-x: hidden;
+      overflow-x: hidden;
+  background: $bg;
+  color: $black;
+}   
+
+.content {
+  overflow: visible;  
+  min-height: $contentmh;
+}
+
+.container {
+  max-width: $content-mw;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  &_padded {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $content-mw;
+    padding: 0 $conpad;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+
+
+
+/* eof main styles */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

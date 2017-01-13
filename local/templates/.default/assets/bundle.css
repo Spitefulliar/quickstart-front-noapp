@@ -1,0 +1,251 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/* ==========================================================================
+   fonts
+   ========================================================================== */
+@font-face {
+  font-family: 'robotoblack';
+  src: url("./../fonts/Roboto/roboto-black.eot");
+  src: url("./../fonts/Roboto/roboto-black.eot?#iefix") format("embedded-opentype"), url("./../fonts/Roboto/roboto-black.woff2") format("woff2"), url("./../fonts/Roboto/roboto-black.woff") format("woff"), url("./../fonts/Roboto/roboto-black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotobold';
+  src: url("./../fonts/Roboto/roboto-bold.eot");
+  src: url("./../fonts/Roboto/roboto-bold.eot?#iefix") format("embedded-opentype"), url("./../fonts/Roboto/roboto-bold.woff2") format("woff2"), url("./../fonts/Roboto/roboto-bold.woff") format("woff"), url("./../fonts/Roboto/roboto-bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotolight';
+  src: url("./../fonts/Roboto/roboto-light.eot");
+  src: url("./../fonts/Roboto/roboto-light.eot?#iefix") format("embedded-opentype"), url("./../fonts/Roboto/roboto-light.woff2") format("woff2"), url("./../fonts/Roboto/roboto-light.woff") format("woff"), url("./../fonts/Roboto/roboto-light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotomedium';
+  src: url("./../fonts/Roboto/roboto-medium.eot");
+  src: url("./../fonts/Roboto/roboto-medium.eot?#iefix") format("embedded-opentype"), url("./../fonts/Roboto/roboto-medium.woff2") format("woff2"), url("./../fonts/Roboto/roboto-medium.woff") format("woff"), url("./../fonts/Roboto/roboto-medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url("./../fonts/Roboto/roboto-regular.eot");
+  src: url("./../fonts/Roboto/roboto-regular.eot?#iefix") format("embedded-opentype"), url("./../fonts/Roboto/roboto-regular.woff2") format("woff2"), url("./../fonts/Roboto/roboto-regular.woff") format("woff"), url("./../fonts/Roboto/roboto-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotothin';
+  src: url("./../fonts/Roboto/roboto-thin.eot");
+  src: url("./../fonts/Roboto/roboto-thin.eot?#iefix") format("embedded-opentype"), url("./../fonts/Roboto/roboto-thin.woff2") format("woff2"), url("./../fonts/Roboto/roboto-thin.woff") format("woff"), url("./../fonts/Roboto/roboto-thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/* eof fonts */
+/* ==========================================================================
+   mixins
+   ========================================================================== */
+/* eof mixins */
+/* ==========================================================================
+     elements
+     ========================================================================== */
+body {
+  background: #ffffff;
+  font-family: "robotoregular", "Helvetica Neue", sans-serif;
+  font-size: 13px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+a, a:visited, a:hover, a:focus {
+  text-decoration: none; }
+
+svg {
+  width: 100%;
+  height: 100%; }
+
+.svg-icon, .social-icon {
+  margin: 0;
+  background-repeat: no-repeat no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  height: 1em;
+  max-width: 1em;
+  line-height: 1em; }
+  .svg-icon svg, .social-icon svg {
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    fill: currentColor; }
+
+.logo {
+  cursor: pointer;
+  display: inline-block; }
+  .logo svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #ffffff; }
+
+.social-icon {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 12px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  transition: color 400ms ease; }
+  .social-icon, .social-icon:visited, .social-icon:focus {
+    color: inherit; }
+  .social-icon_fb:hover {
+    color: #3d5a98; }
+  .social-icon_vk:hover {
+    color: #4c75a3; }
+  .social-icon_ok:hover {
+    color: #ff9600; }
+  .social-icon_tw:hover {
+    color: #2aa9e0; }
+  .social-icon_gplus:hover {
+    color: #dc4a38; }
+  .social-icon_linkedin:hover {
+    color: #0077b5; }
+
+.scroller {
+  padding-right: 18px;
+  margin-right: -18px; }
+  .scroller__wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100%; }
+    .scroller__wrapper__x {
+      width: 100%; }
+  .scroller__track_v {
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: none;
+    opacity: 1; }
+  .scroller__bar_v {
+    right: -3px;
+    width: 6px;
+    border-radius: 0px;
+    background: #ffffff;
+    opacity: 0.4;
+    cursor: pointer; }
+  .scroller::-webkit-scrollbar, .scroller::-webkit-scrollbar-button, .scroller::-webkit-scrollbar-track, .scroller::-webkit-scrollbar-thumb, .scroller::-webkit-scrollbar-corner, .scroller::-webkit-resizer {
+    /* for Mac OS X support */
+    width: 0;
+    height: 0;
+    display: none; }
+
+/* eof elements */
+/* ==========================================================================
+   animations
+   ========================================================================== */
+.animated {
+  animation-duration: 0.8s;
+  animation-fill-mode: both; }
+
+.animated-long {
+  animation-duration: 1.5s;
+  animation-fill-mode: both; }
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible; }
+  to {
+    transform: translate3d(0, 0, 0); } }
+
+.slideInRight {
+  animation-name: slideInRight; }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+.fadeInDown {
+  animation-name: fadeInDown; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+.fadeInUp {
+  animation-name: fadeInUp; }
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); } }
+
+.fadeOutDown {
+  animation-name: fadeOutDown; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fadeIn {
+  animation-name: fadeIn; }
+
+/* eof animations */
+/* ==========================================================================
+   main styles
+   ========================================================================== */
+*:focus, *:active {
+  outline: none; }
+
+html {
+  min-height: 100%; }
+
+body {
+  min-height: 100%;
+  height: auto;
+  position: relative;
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+  background: #ffffff;
+  color: #000000; }
+
+.content {
+  overflow: visible;
+  min-height: 100vh; }
+
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box; }
+  .container_padded {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+    padding: 0 67px;
+    box-sizing: border-box; }
+
+/* eof main styles */
