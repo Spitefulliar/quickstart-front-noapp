@@ -10,17 +10,18 @@
   <base href="/">
 
   <!-- CSS -->  
-  <link rel="stylesheet" type="text/css" href="local/templates/.default/assets/vendor.css?<?php echo time()?>">
-  <link rel="stylesheet" type="text/css" href="local/templates/.default/assets/bundle.css?<?php echo time()?>">
+  <link rel="stylesheet" type="text/css" href="{{'/local/templates/.default/assets/vendor.css'|asset }}">
+  <link rel="stylesheet" type="text/css" href="{{'/local/templates/.default/assets/bundle.css'|asset }}">
   <!-- eof CSS -->
   
   <!-- js -->
-  <script src="local/templates/.default/assets/vendor.js?<?php echo time()?>" type="text/javascript" charset="utf-8" defer></script>
-  <script src="local/templates/.default/assets/bundle.js?<?php echo time()?>" type="text/javascript" charset="utf-8" defer></script>
+  <script src="{{'/local/templates/.default/assets/vendor.js'|asset }}" type="text/javascript" charset="utf-8" defer></script>
+  <script src="{{'/local/templates/.default/assets/bundle.js'|asset }}" type="text/javascript" charset="utf-8" defer></script>
   <!-- eof js -->
 </head>
 
 <body>
+  <h1>Hello</h1>
   
 </body>
 </html>

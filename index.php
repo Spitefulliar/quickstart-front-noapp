@@ -1,26 +1,18 @@
-<!DOCTYPE html>
-<html lang="ru" ng-app="app" art-main-dir>
-<head>
-  <title ng-bind="pageData.title"></title>
+<?php
 
-  <meta charset="UTF-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <base href="/">
+require $_SERVER['DOCUMENT_ROOT'] . '/local/vendor/autoload.php';
 
-  <!-- CSS -->  
-  <link rel="stylesheet" type="text/css" href="./local/templates/.default/assets/vendor.css?<?php echo time()?>">
-  <link rel="stylesheet" type="text/css" href="./local/templates/.default/assets/bundle.css?<?php echo time()?>">
-  <!-- eof CSS -->
-  
-  <!-- js -->
-  <script src="./local/templates/.default/assets/vendor.js?<?php echo time()?>" type="text/javascript" charset="utf-8" defer></script>
-  <script src="./local/templates/.default/assets/bundle.js?<?php echo time()?>" type="text/javascript" charset="utf-8" defer></script>
-  <!-- eof js -->
-</head>
+$obLoader = new Twig_Loader_Filesystem([
+    $_SERVER['DOCUMENT_ROOT'] . '/local/templates/.default/layouts/',
+]);
 
-<body>
-  
-</body>
-</html>
+$obTwig = new Twig_Environment($obLoader, [
+    'debug' => true,
+]);
+
+$obTwig->addExtension(new Twig_Extension_Debug());
+$obTwig->addExtension(new \Core\Twig\CoreTwigExtension());
+
+$layout = $_GET['layout'] ?: 'layout';
+
+echo $obTwig->render($layout.'.twig');

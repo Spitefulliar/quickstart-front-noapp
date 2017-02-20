@@ -1,0 +1,13 @@
+{
+    "require": {
+        "twig/twig": "^1.31"
+    },
+    "config": {
+        "vendor-dir": "local/vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "local/src/Core"
+        }
+    }
+}
