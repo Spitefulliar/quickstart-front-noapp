@@ -13,6 +13,9 @@ $obTwig = new Twig_Environment($obLoader, [
 $obTwig->addExtension(new Twig_Extension_Debug());
 $obTwig->addExtension(new \Core\Twig\CoreTwigExtension());
 
-$layout = $_GET['layout'] ?: 'layout';
+$layout = 'layout';
+if (isset($_GET['layout']) && trim($_GET['layout'])) {
+    $layout = trim($_GET['layout']);
+}
 
 echo $obTwig->render($layout.'.twig');
