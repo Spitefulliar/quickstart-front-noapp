@@ -25,7 +25,7 @@ Contains:
 
 ### Template engine ###
 Twig. Layouts located  at /local/templates/.default/layouts/
-To view certain layout
+To view certain layout get parametr `?layout=[your_layout]`
 
 ## SVG Sprite ##
 SVG files are included in index.js
