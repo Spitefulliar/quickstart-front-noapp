@@ -1,6 +1,8 @@
 //vendor libs
-require('jquery');
-import slick from 'slick-carousel';
+import 'babel-polyfill';
+import 'jquery';
+import 'slick-carousel';
 
 // vendor-styles
-require('normalize.css/normalize.css');
+import 'normalize.css/normalize.css';
+import 'slick-carousel/slick/slick.css';

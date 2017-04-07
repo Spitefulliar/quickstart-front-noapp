@@ -1,9 +1,3 @@
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 /* ==========================================================================
    fonts
    ========================================================================== */
@@ -54,6 +48,69 @@ html {
    mixins
    ========================================================================== */
 /* eof mixins */
+/* ==========================================================================
+   animations
+   ========================================================================== */
+.animated {
+  animation-duration: 0.8s;
+  animation-fill-mode: both; }
+
+.animated-long {
+  animation-duration: 1.5s;
+  animation-fill-mode: both; }
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible; }
+  to {
+    transform: translate3d(0, 0, 0); } }
+
+.slideInRight {
+  animation-name: slideInRight; }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+.fadeInDown {
+  animation-name: fadeInDown; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+.fadeInUp {
+  animation-name: fadeInUp; }
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); } }
+
+.fadeOutDown {
+  animation-name: fadeOutDown; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fadeIn {
+  animation-name: fadeIn; }
+
+/* eof animations */
 /* ==========================================================================
      elements
      ========================================================================== */
@@ -122,6 +179,26 @@ svg {
   .social-icon_linkedin:hover {
     color: #0077b5; }
 
+.btn,
+md-button.btn {
+  overflow: visible;
+  position: relative;
+  margin: 0;
+  font-family: "robotomedium", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  box-sizing: border-box; }
+  .btn.disabled, .btn:disabled,
+  md-button.btn.disabled,
+  md-button.btn:disabled {
+    opacity: 0.3;
+    cursor: default !important; }
+  .btn .svg-icon, .btn .social-icon,
+  md-button.btn .svg-icon,
+  md-button.btn .social-icon {
+    vertical-align: text-top; }
+
 .scroller {
   padding-right: 18px;
   margin-right: -18px; }
@@ -150,70 +227,82 @@ svg {
     height: 0;
     display: none; }
 
+.badge {
+  display: inline-block;
+  padding: 0 2px;
+  color: #ffffff;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  font-family: "robotomedium", "Helvetica Neue", sans-serif;
+  font-size: 11px;
+  line-height: 16px;
+  background: #000000;
+  text-align: center;
+  box-sizing: border-box; }
+
+.form_vertical .input-container_white {
+  border-top: 1px solid lightgrey; }
+  .form_vertical .input-container_white:first-of-type {
+    border-top: none;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px; }
+  .form_vertical .input-container_white:last-of-type {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px; }
+  .form_vertical .input-container_white input.md-input:-webkit-autofill:first-of-type,
+  .form_vertical .input-container_white input[type="text"].md-input:-webkit-autofill:first-of-type,
+  .form_vertical .input-container_white input[type="password"].md-input:-webkit-autofill:first-of-type,
+  .form_vertical .input-container_white input[type="email"].md-input:-webkit-autofill:first-of-type {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px; }
+  .form_vertical .input-container_white input.md-input:-webkit-autofill:last-of-type,
+  .form_vertical .input-container_white input[type="text"].md-input:-webkit-autofill:last-of-type,
+  .form_vertical .input-container_white input[type="password"].md-input:-webkit-autofill:last-of-type,
+  .form_vertical .input-container_white input[type="email"].md-input:-webkit-autofill:last-of-type {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px; }
+
+.form_vertical .md-custom.md-button {
+  display: block;
+  width: 100%;
+  height: 46px;
+  margin-top: 17px;
+  box-sizing: border-box; }
+
+.input-container_white {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-size: 15px; }
+  .input-container_white label:not(.md-no-float):not(.md-container-ignore),
+  .input-container_white .md-placeholder {
+    font-family: "robotomedium", "Helvetica Neue", sans-serif;
+    padding-left: 16px;
+    -ms-transform: translate3d(0, 40px, 0) scale(1);
+    transform: translate3d(0, 40px, 0) scale(1); }
+  .input-container_white.md-input-focused label:not(.md-no-float),
+  .input-container_white.md-input-has-placeholder label:not(.md-no-float),
+  .input-container_white.md-input-has-value label:not(.md-no-float) {
+    -ms-transform: translate3d(0, 22px, 0) scale(0.75);
+    transform: translate3d(0, 22px, 0) scale(0.75); }
+  .input-container_white input.md-input,
+  .input-container_white input[type="text"].md-input,
+  .input-container_white input[type="password"].md-input,
+  .input-container_white input[type="email"].md-input {
+    display: block;
+    height: 47px;
+    width: 100%;
+    max-width: 100%;
+    padding: 23px 16px 8px;
+    border-bottom: none;
+    color: #000000;
+    line-height: 16px;
+    box-sizing: border-box; }
+  .input-container_white .md-errors-spacer {
+    display: none; }
+
 /* eof elements */
-/* ==========================================================================
-   animations
-   ========================================================================== */
-.animated {
-  animation-duration: 0.8s;
-  animation-fill-mode: both; }
-
-.animated-long {
-  animation-duration: 1.5s;
-  animation-fill-mode: both; }
-
-@keyframes slideInRight {
-  from {
-    transform: translate3d(100%, 0, 0);
-    visibility: visible; }
-  to {
-    transform: translate3d(0, 0, 0); } }
-
-.slideInRight {
-  animation-name: slideInRight; }
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0); }
-  to {
-    opacity: 1;
-    transform: none; } }
-
-.fadeInDown {
-  animation-name: fadeInDown; }
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0); }
-  to {
-    opacity: 1;
-    transform: none; } }
-
-.fadeInUp {
-  animation-name: fadeInUp; }
-
-@keyframes fadeOutDown {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0); } }
-
-.fadeOutDown {
-  animation-name: fadeOutDown; }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-.fadeIn {
-  animation-name: fadeIn; }
-
-/* eof animations */
 /* ==========================================================================
    main styles
    ========================================================================== */
@@ -249,3 +338,11 @@ body {
     box-sizing: border-box; }
 
 /* eof main styles */
+/* ==========================================================================
+   mixins
+   ========================================================================== */
+/* eof mixins */
+.default {
+  background-color: #fff; }
+
+/*# sourceMappingURL=bundle.css.map*/
