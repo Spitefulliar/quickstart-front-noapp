@@ -24,7 +24,7 @@ Contains:
 - scripts, included in index.js (aka app, sprite generator). Located at [root directory]/js/;
 
 ### Template engine ###
-Twig. Layouts located  at /local/templates/.default/layouts/
+Twig. Layouts located  at [root directory]/.default/layouts/
 To view certain layout get parametr `?layout=[your_layout]`
 
 ## SVG Sprite ##
