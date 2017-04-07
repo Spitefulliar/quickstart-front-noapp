@@ -754,6 +754,17 @@ babylon@^6.11.0, babylon@^6.15.0:
   version "6.15.0"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.15.0.tgz#ba65cfa1a80e1759b0e89fb562e27dccae70348e"
 
+baconjs@~0.3.0:
+  version "0.3.15"
+  resolved "https://registry.yarnpkg.com/baconjs/-/baconjs-0.3.15.tgz#d96ac70c40a6b8d109cf1be67804c2e15c149572"
+
+baconui@^0.3.14:
+  version "0.3.14"
+  resolved "https://registry.yarnpkg.com/baconui/-/baconui-0.3.14.tgz#ad89697993fb8bb8c4b4b5ed2037071e03a32960"
+  dependencies:
+    baconjs "~0.3.0"
+    jquery-browserify "~1.8.1"
+
 balanced-match@^0.4.1, balanced-match@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-0.4.2.tgz#cb3f3e3c732dc0f01ee70b403f302e61d7709838"
@@ -2169,6 +2180,10 @@ jodid25519@^1.0.0:
   resolved "https://registry.yarnpkg.com/jodid25519/-/jodid25519-1.0.2.tgz#06d4912255093419477d425633606e0e90782967"
   dependencies:
     jsbn "~0.1.0"
+
+jquery-browserify@~1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/jquery-browserify/-/jquery-browserify-1.8.1.tgz#0dea9d741a4f4115ae1980c4531b22502991a015"
 
 jquery@>=1.7.2, jquery@^3.1.1:
   version "3.1.1"
