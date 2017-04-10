@@ -1,6 +1,6 @@
 //utils
 // $images: "./../dist/img";
-// $fontspath: "./../dist/fonts";
+$node_modules: '../../../../node_modules/';
 $images: "./../img";
 $fontspath: "./../fonts";
 $imgslg: "/desktop";
@@ -38,7 +38,7 @@ $contentmh: 100vh;
 
 //dimentions
 $contentmh: 100vh;
-$tbheight: 32px * $mult; 
+$tbheight: 32px * $mult;
 $tbpad: 4px * $mult;
 $navbarh: $tbheight - $tbpad * $mult;
 
@@ -64,3 +64,15 @@ $black: #000000;
 $bg: $white;
 $border: lightgrey;
 $brand: $black;
+
+//bourbon-neat settings:
+$neat-grid: (
+    columns: 15,
+    gutter: 20px
+);
+
+$neat-grid-lg: (
+    columns: 12,
+    gutter: 20px,
+    media: $lbrp-lg
+);

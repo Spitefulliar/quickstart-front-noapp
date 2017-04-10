@@ -12,6 +12,7 @@ var projectRootPath = path.join(__dirname, '/local/templates/.default');      //
 var entryPath = path.join(projectRootPath, '/js');         //path to input dir
 var assetsPath = path.join(projectRootPath, '/assets');    //path to output dir
 
+
 if (NODE_ENV == 'production') {
   var sourcemaps = false;
   var minimize = true;
@@ -129,7 +130,13 @@ var config = {
                         package: postcssPackage
                       }
                     },
-                    { loader: 'sass-loader' }
+                    { loader: 'sass-loader',
+                      options: {
+                        includePaths: [
+                          ''
+                        ]
+                      }
+                   }
                   ]
               })
             },

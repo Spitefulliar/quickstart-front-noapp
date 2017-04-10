@@ -4,5 +4,10 @@
 
 //component styles here
 .default {
-    background-color: #fff;
+    background: pink;
+    // neat grid demo element
+    @include grid-column(5);
+    @include grid-media($neat-grid-lg){
+        @include grid-column(5);
+    }
 }

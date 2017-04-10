@@ -4,7 +4,10 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+<<<<<<< HEAD
 
+=======
+>>>>>>> 871ae088894db66a64b9ed65ca6b418534bd0b2e
         {
             "type": "node",
             "request": "launch",
@@ -14,9 +17,17 @@
         {
             "type": "node",
             "request": "attach",
+<<<<<<< HEAD
             "name": "Attach to Process",
+=======
+            "name": "Attach to Port",
+>>>>>>> 871ae088894db66a64b9ed65ca6b418534bd0b2e
             "address": "localhost",
             "port": 5858
         }
     ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 871ae088894db66a64b9ed65ca6b418534bd0b2e
