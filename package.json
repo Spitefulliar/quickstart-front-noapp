@@ -8,7 +8,8 @@
     "build": "NODE_ENV=develop webpack --progress",
     "buildprod": "NODE_ENV=production webpack --progress",
     "watch": "webpack -w",
-    "pull": "git pull origin master && yarn && NODE_ENV=production webpack --progress"
+    "pull": "git pull origin master && yarn && NODE_ENV=production webpack --progress",
+    "devserver": "node_modules/.bin/webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -56,5 +57,8 @@
     "twig-loader": "^0.3.0",
     "url-loader": "^0.5.7",
     "webpack": "^2.3.3"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.4.2"
   }
 }
