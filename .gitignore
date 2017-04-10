@@ -12,3 +12,4 @@
 /vendor/
 
 /yarn-error.log
+/npm-debug.log
