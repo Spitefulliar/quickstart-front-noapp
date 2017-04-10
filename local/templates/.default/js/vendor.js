@@ -2,7 +2,7 @@
 import 'babel-polyfill';
 import 'jquery';
 import 'slick-carousel';
-import 'baconjs';
+import  Bacon from 'baconjs';
 import 'baconui';
 
 // vendor-styles
