@@ -1,6 +1,9 @@
 /* ==========================================================================
    mixins
    ========================================================================== */
+// importing bourbon-neat
+@import '../../../../node_modules/bourbon-neat/core/neat.scss';
+
 @mixin link-text() {
   text-decoration: none;
   color: inherit;

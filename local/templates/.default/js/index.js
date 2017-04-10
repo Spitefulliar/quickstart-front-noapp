@@ -1,2 +1,2 @@
-import sprite from './sprite.js'; //Генератор svg спрайта
+// import sprite from './sprite.js'; //Генератор svg спрайта
 
