@@ -338,6 +338,7 @@ var config = {
           'window.jQuery': 'jquery',
           'Slick': 'slick-carousel',
           'Bacon': 'baconjs',
+          'Bacon.UI': 'baconui',
           // 'TweenMax': 'TweenMax',
           // 'TimeLineMax': 'TimeLineMax',
           // 'ScrollMagic': 'scrollmagic',
