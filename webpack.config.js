@@ -1,6 +1,7 @@
 const NODE_ENV = process.env.NODE_ENV;
 
 var webpack = require('webpack');
+var webpackDevServer = require('webpack-dev-server');
 var path = require('path');
 
 var ExtractPlugin = require('extract-text-webpack-plugin');
@@ -8,9 +9,9 @@ var autoprefixer = require('autoprefixer-core');
 var csswring     = require('csswring');
 var CopyPlugin = require('copy-webpack-plugin');
 
-var projectRootPath = path.join(__dirname, '/local/templates/.default');      //path to root
-var entryPath = path.join(projectRootPath, '/js');         //path to input dir
-var assetsPath = path.join(projectRootPath, '/assets');    //path to output dir
+var projectRootPath = path.join(__dirname, '/local/templates/.default/');      //path to root
+var entryPath = path.join(projectRootPath, '/js/');         //path to input dir
+var assetsPath = path.join(projectRootPath, '/assets/');    //path to output dir
 
 if (NODE_ENV == 'production') {
   var sourcemaps = false;
@@ -388,6 +389,18 @@ if (NODE_ENV == 'production') {
 
 } else {
   config.devtool = "source-map";
+  config.devServer = {
+    contentBase: entryPath,
+    publicPath: assetsPath,
+    compress: true,
+    port: 9000,
+    host: '192.168.1.159',
+    // clientLogLevel: "none"
+    watchContentBase: true,
+    watchOptions: {
+      poll: true
+    }
+  };
 }
 
 console.info("\x1b[37m", "\x1b[40m");
