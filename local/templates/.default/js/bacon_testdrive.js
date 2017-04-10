@@ -1,7 +1,3 @@
-import Bacon from 'baconjs';
-import 'baconui';
-
-
 let form = $('#register-form');
 let regBtn = form.find('button[type="submit"]');
 let usernameField = form.find("#username input");
