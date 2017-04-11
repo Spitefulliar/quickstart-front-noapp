@@ -9,9 +9,9 @@ var autoprefixer = require('autoprefixer-core');
 var csswring     = require('csswring');
 var CopyPlugin = require('copy-webpack-plugin');
 
-var projectRootPath = path.join(__dirname, '/local/templates/.default/');      //path to root
-var entryPath = path.join(projectRootPath, '/js/');         //path to input dir
-var assetsPath = path.join(projectRootPath, '/assets/');    //path to output dir
+var projectRootPath = path.join(__dirname, '/local/templates/.default');      //path to root
+var entryPath = path.join(projectRootPath, '/js');         //path to input dir
+var assetsPath = path.join(projectRootPath, '/assets');    //path to output dir
 
 
 if (NODE_ENV == 'production') {
@@ -203,7 +203,7 @@ var config = {
                 {
                   loader: "svg-sprite-loader",
                   options: {
-                    "name": 'spr-[name]',
+                   "name": 'spr-[name]',
                     "prefixize": true,
                     "exclude": /(\.font\.)/,
                   }
@@ -276,14 +276,14 @@ var config = {
                 {
                   loader: "babel-loader",
                   options: {
-                    // 'presets': [['es2015', { "modules": false }]]
                     "presets": [
-                        ["env", {
-                          "targets": {
-                            "browsers": ["last 2 versions", "ie >= 10"]
-                          },
-                          "useBuiltIns": true,
-                          "debug": false
+                      // ['es2015', { "modules": false }],
+                      ["env", {
+                        "targets": {
+                          "browsers": ["last 2 versions", "ie >= 10"]
+                        },
+                        "useBuiltIns": true,
+                        "debug": false
                       }]
                     ]
                   }

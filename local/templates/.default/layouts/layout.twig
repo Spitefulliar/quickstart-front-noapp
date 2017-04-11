@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ru" ng-app="app" art-main-dir>
 <head>
@@ -49,3 +50,33 @@
   </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="ru" ng-app="app" art-main-dir>
+<head>
+  <title ng-bind="pageData.title"></title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <base href="/">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{{'/local/templates/.default/assets/vendor.css'|asset }}">
+  <link rel="stylesheet" type="text/css" href="{{'/local/templates/.default/assets/bundle.css'|asset }}">
+  <!-- eof CSS -->
+
+  <!-- js -->
+  <script rel="preload" src="{{'/local/templates/.default/assets/vendor.js'|asset }}" type="text/javascript" charset="utf-8" defer></script>
+  <script rel="preload" src="{{'/local/templates/.default/assets/bundle.js'|asset }}" type="text/javascript" charset="utf-8" defer></script>
+  <!-- eof js -->
+</head>
+
+<body>
+{% block main %}
+  <h1>Hello</h1>
+{% endblock %}
+</body>
+</html>
+>>>>>>> 4032c74627edbaa9951402f3d8437c92a0cd3d0b
