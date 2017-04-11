@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ==========================================================================
    mixins
    ========================================================================== */
@@ -30,3 +31,51 @@
 }
 
 /* eof mixins */
+=======
+/* ==========================================================================
+   mixins
+   ========================================================================== */
+@mixin link-text() {
+  text-decoration: none;
+  color: inherit;
+  &, &:visited, &:focus {
+    color: inherit;
+  }
+}
+@mixin panel() {
+  border-radius: 2px;
+  color: $dark;
+  background-color: $white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+@mixin list-plain() {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+@mixin text-ellipsis() {
+  white-space: nowrap;
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+}
+
+@mixin svg-icon() {
+  margin: auto;
+  background-repeat: no-repeat no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  height: 1em;
+  max-width: 1em;
+  line-height: 1em;
+
+  svg {
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    fill: currentColor;
+  }
+}
+
+/* eof mixins */
+>>>>>>> 4032c74627edbaa9951402f3d8437c92a0cd3d0b

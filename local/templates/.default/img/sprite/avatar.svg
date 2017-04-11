@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Avatar</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="11" cy="11" r="11"></circle>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-/-Avatar">
+            <g id="avatar">
+                <circle id="Oval-Copy" stroke="#53565C" stroke-width="2" cx="11" cy="11" r="10"></circle>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <path d="M7.12666717,14.9983075 L8.2544473,14.3729195 L7.36797172,13.4363518 C6.49444674,12.5134664 6,11.2968328 6,10 C6,7.23857625 8.23857625,5 11,5 C13.7614237,5 16,7.23857625 16,10 C16,11.2968328 15.5055533,12.5134664 14.6320283,13.4363518 L13.7455527,14.3729195 L14.8733328,14.9983075 C17.3998177,16.3993193 19,19.0587061 19,22 C19,26.418278 15.418278,30 11,30 C6.581722,30 3,26.418278 3,22 C3,19.0587061 4.60018228,16.3993193 7.12666717,14.9983075 Z" id="Combined-Shape" stroke="#53565C" stroke-width="2" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
