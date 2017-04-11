@@ -26,4 +26,21 @@
           text-overflow: ellipsis;
 }
 
+@mixin svg-icon() {
+  margin: auto;
+  background-repeat: no-repeat no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  height: 1em;
+  max-width: 1em;
+  line-height: 1em;
+
+  svg {
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    fill: currentColor;
+  }
+}
+
 /* eof mixins */
