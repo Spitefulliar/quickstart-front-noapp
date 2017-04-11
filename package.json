@@ -8,7 +8,8 @@
     "build": "NODE_ENV=develop webpack --progress",
     "buildprod": "NODE_ENV=production webpack --progress",
     "watch": "webpack -w",
-    "pull": "git pull origin master && yarn && NODE_ENV=production webpack --progress"
+    "pull": "git pull origin master && yarn && NODE_ENV=production webpack --progress",
+    "devserver": "node_modules/.bin/webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,7 @@
     "css-raw-loader": "^0.1.1",
     "cssnano": "^3.5.2",
     "csswring": "^3.0.5",
-    "expose-loader": "^0.7.3",
+    "expose-loader": "=0.7.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.8.5",
     "gsap": "^1.19.0",
@@ -50,9 +51,13 @@
     "scrollmagic": "^2.0.5",
     "slick-carousel": "^1.6.0",
     "style-loader": "^0.16.1",
-    "svg-sprite-loader": "0.0.16",
+    "svg-sprite-loader": "latest",
+    "twig": "^1.10.4",
     "twig-loader": "^0.3.0",
     "url-loader": "^0.5.7",
     "webpack": "^2.3.3"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.4.2"
   }
 }

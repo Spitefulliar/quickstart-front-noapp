@@ -1,6 +1,7 @@
 const NODE_ENV = process.env.NODE_ENV;
 
 var webpack = require('webpack');
+var webpackDevServer = require('webpack-dev-server');
 var path = require('path');
 
 var ExtractPlugin = require('extract-text-webpack-plugin');
@@ -195,7 +196,7 @@ var config = {
                 {
                   loader: "svg-sprite-loader",
                   options: {
-                    "name": 'spr-[name]',
+                   "name": 'spr-[name]',
                     "prefixize": true,
                     "exclude": /(\.font\.)/,
                   }
@@ -268,14 +269,14 @@ var config = {
                 {
                   loader: "babel-loader",
                   options: {
-                    // 'presets': [['es2015', { "modules": false }]]
                     "presets": [
-                        ["env", {
-                          "targets": {
-                            "browsers": ["last 2 versions", "ie >= 10"]
-                          },
-                          "useBuiltIns": true,
-                          "debug": false
+                      // ['es2015', { "modules": false }],
+                      ["env", {
+                        "targets": {
+                          "browsers": ["last 2 versions", "ie >= 10"]
+                        },
+                        "useBuiltIns": true,
+                        "debug": false
                       }]
                     ]
                   }
@@ -390,6 +391,18 @@ if (NODE_ENV == 'production') {
 
 } else {
   config.devtool = "source-map";
+  config.devServer = {
+    contentBase: entryPath,
+    publicPath: assetsPath,
+    compress: true,
+    port: 9000,
+    host: '192.168.1.159',
+    // clientLogLevel: "none"
+    watchContentBase: true,
+    watchOptions: {
+      poll: true
+    }
+  };
 }
 
 console.info("\x1b[37m", "\x1b[40m");
