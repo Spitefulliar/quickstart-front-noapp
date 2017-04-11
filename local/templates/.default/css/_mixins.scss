@@ -1,40 +1,9 @@
-<<<<<<< HEAD
 /* ==========================================================================
    mixins
    ========================================================================== */
 // importing bourbon-neat
 @import '../../../../node_modules/bourbon-neat/core/neat.scss';
 
-@mixin link-text() {
-  text-decoration: none;
-  color: inherit;
-  &, &:visited, &:focus {
-    color: inherit;
-  }
-}
-@mixin panel() {
-  border-radius: 2px;
-  color: $dark;
-  background-color: $white;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-}
-@mixin list-plain() {
-  margin: 0;
-  padding-left: 0;
-  list-style-type: none;
-}
-@mixin text-ellipsis() {
-  white-space: nowrap;
-      overflow: hidden;
-      -ms-text-overflow: ellipsis;
-          text-overflow: ellipsis;
-}
-
-/* eof mixins */
-=======
-/* ==========================================================================
-   mixins
-   ========================================================================== */
 @mixin link-text() {
   text-decoration: none;
   color: inherit;
@@ -78,4 +47,3 @@
 }
 
 /* eof mixins */
->>>>>>> 4032c74627edbaa9951402f3d8437c92a0cd3d0b
