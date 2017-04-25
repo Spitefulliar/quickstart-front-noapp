@@ -5,10 +5,7 @@ $(document).ready(function(){
     let usernameField = form.find("#username input");
     let fullnameField = form.find("#fullname input");
 
-    // function textFieldValue(textField) {
-    //     function value() { return textField.val() }
-    //     return textField.asEventStream("keyup").map(value).toProperty(value())
-    // }
+
 
     let username = Bacon.UI.textFieldValue(usernameField);
     let fullname = Bacon.UI.textFieldValue(fullnameField);
