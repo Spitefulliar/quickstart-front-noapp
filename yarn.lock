@@ -769,9 +769,9 @@ babylon@^6.11.0, babylon@^6.15.0:
   version "6.15.0"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.15.0.tgz#ba65cfa1a80e1759b0e89fb562e27dccae70348e"
 
-bacon@latest:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/bacon/-/bacon-0.0.1.tgz#2598b4b478d92e710f28196d341282e70709e8fc"
+baconjs@latest:
+  version "0.7.93"
+  resolved "https://registry.yarnpkg.com/baconjs/-/baconjs-0.7.93.tgz#9b056a1689e09eabb3d907a5ac30bb6b47861765"
 
 baconjs@~0.3.0:
   version "0.3.15"
